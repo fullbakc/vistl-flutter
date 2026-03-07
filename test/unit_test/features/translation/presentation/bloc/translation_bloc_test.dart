@@ -17,7 +17,14 @@ class MockTranslateTextUseCase extends Mock implements TranslateTextUseCase {}
 
 class MockTranslationRepository extends Mock implements TranslationRepository {}
 
+class FakeTranslationEntity extends Fake implements TranslationEntity {}
+
 void main() {
+
+  setUpAll(() {
+    registerFallbackValue(FakeTranslationEntity());
+  });
+
   late TranslationBloc bloc;
   late MockTranslateTextUseCase mockTranslateTextUseCase;
   late MockTranslationRepository mockTranslationRepository;
