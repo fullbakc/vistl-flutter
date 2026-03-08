@@ -1,10 +1,10 @@
-# VisTL - Visual Translator 📱🌍
+# VisTL - Visual Translator
 
 VisTL is an advanced, offline-first Flutter application that extracts text from images using on-device Machine Learning and translates it instantly using generative AI.
 
 Built with **Clean Architecture**, this project demonstrates enterprise-level state management, dependency injection, local caching, and comprehensive testing.
 
-## ✨ Key Features
+## Key Features
 * **On-Device OCR:** Utilizes Google ML Kit to extract text directly from local images (e.g., screenshots, technical diagrams, or raw manga pages) without sending unencrypted image data over the network.
 * **AI-Powered Translation:** Integrates the Gemini 2.5 Flash API for lightning-fast, context-aware text translation.
 * **Offline History:** Automatically caches recent translations using **Hive** (NoSQL) and permanently archives history using **SQLite** (Relational).
@@ -20,7 +20,7 @@ Built with **Clean Architecture**, this project demonstrates enterprise-level st
 * **Machine Learning:** `google_mlkit_text_recognition`
 * **Routing:** `auto_route`
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 ```
