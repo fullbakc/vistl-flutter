@@ -18,7 +18,6 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
     on<ExtractAndTranslateTextEvent>((event, emit) async {
       emit(TranslationLoading());
 
-      // 1. Extract text using ML Kit
       print("DEBUG: Starting Extraction...");
       final extractionResult = await repository.extractTextFromImage(
         event.imagePath,
@@ -27,15 +26,15 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
       await extractionResult.fold(
         (failure) async => emit(TranslationError(failure.message)),
         (extractedText) async {
-          // 2. Translate text using Gemini
-          final translationResult = await translateTextUseCase.call(
+
+          final translationResult = await translateTextUseCase.call(//gemini
             extractedText,
           );
           print("DEBUG: Text Extracted: $extractedText");
           translationResult.fold(
             (failure) => emit(TranslationError(failure.message)),
             (translation) {
-              // 3. Save to local DB (Offline support)
+
               print("DEBUG: Saving translation: $translation");
               repository.saveTranslation(translation);
               emit(TranslationSuccess(translation));

@@ -23,41 +23,48 @@ Built with **Clean Architecture**, this project demonstrates enterprise-level st
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
-```bash
+```
 git clone <your-repo-url>
 cd vistl
-2. Install Dependencies
-Bash
+```
 
+### 2. Install Dependencies
+
+```
 flutter pub get
-3. Environment Setup (.env)
+```
+
+### 3. Environment Setup (.env)
 This application requires a Gemini API key. Create a .env file in the root directory and add your key:
 
-Code snippet
-
+```
 GEMINI_API_KEY=your_actual_api_key_here
-(Note: Ensure .env is listed in your .gitignore before committing!)
+```
 
-4. Code Generation
+### 4. Code Generation
 If you make changes to the router, run the build runner to regenerate the routing files:
 
-Bash
-
+```
 dart run build_runner build --delete-conflicting-outputs
-5. Run the App
-Bash
+```
 
+### 5. Run the App
+
+```
 flutter run
-🧪 Testing
+```
+
+Testing
 This project strictly follows the Testing Pyramid, implementing Unit, Widget, and Integration tests using mocktail and integration_test.
 
 Run Unit & Widget Tests:
 
-Bash
-
+```
 flutter test
+```
+
 Run End-to-End Integration Test: (Requires a running emulator/device)
 
-Bash
-
+```
 flutter test integration_test/app_test.dart
+```
