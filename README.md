@@ -10,7 +10,7 @@ Built with **Clean Architecture**, this project demonstrates enterprise-level st
 * **Offline History:** Automatically caches recent translations using **Hive** (NoSQL) and permanently archives history using **SQLite** (Relational).
 * **Responsive State Management:** Powered by `flutter_bloc` for seamless UI updates and predictable data flow.
 
-## 🛠 Tech Stack
+## Tech Stack
 * **Framework:** Flutter (Dart)
 * **Architecture:** Clean Architecture (Domain, Data, Presentation layers)
 * **State Management:** BLoC (`flutter_bloc`)
